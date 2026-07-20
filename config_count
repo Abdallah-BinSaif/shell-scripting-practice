@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo -n "Count for conf. Which Path? <> "
+read path
+
+ls -R $path 2> /dev/null | sort | grep conf | wc -w
