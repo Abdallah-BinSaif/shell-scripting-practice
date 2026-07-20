@@ -1,0 +1,3 @@
+#!/bin/bash
+
+{ date; uptime; } | tee -a /home/binsaif/uptime_log.txt
