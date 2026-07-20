@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo -n "Give a name for your playground <> "
+read path
+
+# first make directory
+cd ~
+mkdir $path
+
+# create child directory
+cd ~/$path
+mkdir dir-{1..4} fun-dir
+
+# copy some file
+cp /etc/passwd dir-1 2> /dev/null
+cp /etc/*conf dir-2 2> /dev/null
+cp /etc/a* dir-3 2> /dev/null
+cp /etc/[bc]* dir-4 2> /dev/null
