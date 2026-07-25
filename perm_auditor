@@ -1,0 +1,5 @@
+#!/bin/bash
+
+count=$(ls -l | grep [[:alpha:]-][r-][w-][x-][r-][w-][x-][r-][w][x-]. | wc -l)
+
+echo  "you have $count insecure file(s) or directory"
