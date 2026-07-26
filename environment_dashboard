@@ -1,0 +1,13 @@
+#!/bin/bash
+
+environment="$(printenv)"
+echo "Hi, $USER your login and environment Dashboard Summary"
+userID="$(id -u $USER)"
+groupID="$(id -G $USER)"
+groupName="$(id -Gn $USER)"
+paths="($PATH)"
+
+echo "user ID => $userID"
+echo "group names => $groupName"
+echo "group IDs => $groupID"
+echo "paths your shell search for command => $paths"
