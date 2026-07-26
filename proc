@@ -1,0 +1,9 @@
+#!/bin/bash
+
+Date=$(date +%F)
+Time=$(date +%R)
+
+cd ~/process_logger
+
+echo Time $Time >> $Date
+ps x >> $Date
