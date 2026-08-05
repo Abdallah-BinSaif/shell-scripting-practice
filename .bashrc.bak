@@ -1,0 +1,9 @@
+umask 0002
+
+#ignore duplicates in command history
+export HISTSIZE=10000
+export HISTCONTROL=ignoredups
+export HISTIGNORE="ls:ll:l.:exit:clear:history:cd:top"
+PS1="\[\e[1;34m\][ \d ]\[\e[1;32m\] (\u)\[\e[1;35m\] {\w}\n\[\e[1;34m\][ \@ ] \[\e[0m\]\$\[\e[1;37m\] "
+export PS1
+
