@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Which package? "
+read pkg
+
+info="dnf info $pkg"
+version=$($info | grep Version)
+size=$($info | grep Size)
+description=$($info | grep Description)
+
+echo "$version"
+echo "$size"
+echo "$description"
+
