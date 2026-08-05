@@ -10,6 +10,8 @@ mkdir $path
 # create child directory
 cd ~/$path
 mkdir dir-{1..4} fun-dir
+mkdir fun-dir-{001..100}
+touch fun-dir-{001..100}/file-{A..Z}
 
 # copy some file
 cp /etc/passwd dir-1 2> /dev/null
