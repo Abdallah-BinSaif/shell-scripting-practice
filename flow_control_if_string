@@ -1,0 +1,22 @@
+#!/bin/bash
+# test-string: evaluate the vlaue of a string
+
+echo "Do you want to visit Dhaka"
+read ANSWER
+
+if [ -z "$ANSWER" ]; then
+	echo "There is no answer." 
+	exit 1
+fi
+
+if [ "$ANSWER" == "yes" ]; then
+	echo "The answer is YES."
+elif [ "$ANSWER" == "no" ]; then
+	echo "The answer is NO."
+elif [ "$ANSWER" == "maybe" ]; then
+	echo "The answer is MAYBE."
+else
+	echo "The answer is UNKNWON"
+fi
+
+exit
