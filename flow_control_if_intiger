@@ -5,22 +5,23 @@
 echo "What INT in your mind ? <> "
 read INT
 
-if [ -z "$INT" ]; then
-	echo "INT is empty" >&2
-	exit 1
-fi
-if [ "$INT" -eq 0 ]; then
-	echo "INT is Zero"
-else
-	if [ "$INT" -lt 0 ]; then
-		echo "INT is Negative"
+if [[ "$INT" =~ ^-?[0-9]+$ ]]; then
+	if [ "$INT" -eq 0 ]; then
+		echo "INT is Zero"
 	else
-		echo "INT is positive"
-	fi
+		if [ "$INT" -lt 0 ]; then
+			echo "INT is Negative"
+		else
+			echo "INT is positive"
+		fi
 
-	if [ $((INT % 2)) -eq 0 ]; then
-		echo "INT is even"
-	else
-		echo "INT is odd"
+		if [ $((INT % 2)) -eq 0 ]; then
+			echo "INT is even"
+		else
+			echo "INT is odd"
+		fi
 	fi
+else
+	echo "INT is not an integer" >&2
+	exit 1
 fi
